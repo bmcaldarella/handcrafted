@@ -1,163 +1,194 @@
 # Handcrafted Haven
 
-Handcrafted Haven is a digital marketplace built to connect independent artisans with customers who value handmade, unique, and sustainable products. The platform focuses on community, seller visibility, and a smoother shopping experience for handcrafted goods.
+Handcrafted Haven is a digital marketplace designed to connect independent artisans with customers who appreciate handmade, unique, and sustainable products. The platform focuses on giving visibility to small creators while providing a modern and intuitive shopping experience.
 
-## Live Demo
+This project was developed using a modern full-stack JavaScript environment with a strong focus on scalability, collaboration, and clean architecture.
 
-https://handcrafted-haven-rouge-phi.vercel.app/
+---
 
-## Project Overview
+# Live Demo
 
-This project was developed as a collaborative e-commerce platform where artisans can showcase their products, manage their seller presence, and connect with buyers through a modern web experience.
+https://handcrafted-haven-rouge-phi.vercel.app
 
-The application includes product browsing, product details, seller profiles, authentication, reviews, and cart-related functionality. It is designed to support both customers and sellers in a marketplace environment.
+---
 
-## Collaboration
+# Project Overview
 
-This repository is a fork of the original project created by **Simphiwe Nkabinde**, and I contributed to the project in collaboration with the original repository owner.
+Handcrafted Haven is an e-commerce style platform where artisans can showcase their handmade products and customers can browse, explore, and purchase unique items.
 
-My work on this project focused on improving the seller experience and strengthening the connection between products and seller identity across the platform. Rather than building the entire platform alone, I worked as a collaborator on an existing team project and contributed features, refactors, and merges that became part of the application.
+The application includes product browsing, product details, seller profiles, authentication, reviews, and shopping cart functionality.
 
-## My Contributions
+The goal of the platform is to create a marketplace that highlights the identity of each seller and allows users to discover products directly from independent creators.
 
-My visible contributions in this repository include work related to:
+---
 
-- Fetching and displaying seller information on the product detail page
-- Adding seller information to the `fetchProductById` data layer
-- Improving the **products by users** feature
-- Creating and improving the **seller profile / My Profile** experience
-- Merging and integrating collaborative pull requests into the main branch
+# Collaboration
 
-These contributions helped improve how seller data is presented, how users navigate between products and seller profiles, and how seller-related features are structured in the app.
+This repository is a **fork of the original project created by Simphiwe Nkabinde**.
 
-## Main Features
+I worked on this project **in collaboration with the repository owner**, contributing features, improvements, and integrations within the existing codebase.
 
-- Product listing and product detail pages
-- Product filtering, search, and pagination
+Rather than building the entire platform independently, my role focused on extending functionality, improving seller-related features, and integrating product and seller data across the application.
+
+This fork represents my **technical contributions and collaborative work** within the original project.
+
+---
+
+# My Contributions
+
+My work on this project included contributions related to the seller experience and the integration between products and seller profiles.
+
+Main areas I worked on include:
+
+- Implementing seller information on the product detail page
+- Extending the `fetchProductById` function to include seller data
+- Improving the **products-by-user** functionality
+- Developing and improving the **My Profile / Seller Profile** experience
+- Integrating seller data with product pages
+- Merging collaborative pull requests into the main branch
+- Improving project structure and feature integration
+
+These contributions helped strengthen the connection between sellers and the products displayed on the platform.
+
+---
+
+# Features
+
+The application currently includes the following functionality:
+
+- Product catalog and browsing
+- Product detail pages
 - Seller profile pages
-- Current seller profile management
-- User authentication and session handling
+- User authentication
 - Product reviews
-- Shopping cart functionality
-- Marketplace-style browsing experience
+- Shopping cart system
+- Category filtering
+- Product pagination
+- Seller product listings
+- Marketplace-style navigation
 
-## Tech Stack
+---
 
-- **Next.js**
-- **React**
-- **TypeScript**
-- **NextAuth**
-- **Postgres**
-- **Tailwind CSS**
-- **Zod**
-- **bcrypt**
+# Tech Stack
 
-## Project Structure
+Frontend
 
-```bash
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+Backend / Data Layer
+
+- NextAuth
+- PostgreSQL
+- Zod
+- bcrypt
+
+Development Tools
+
+- Node.js
+- Git
+- Vercel (deployment)
+
+---
+
+# Project Structure
 app/
-  (auth)/
-  cart/
-  checkout/
-  dashboard/
-  inventory/
-  lib/
-  products/
-  profile/
-  profiles/
-  seed/
-  ui/
+(auth)/
+cart/
+checkout/
+dashboard/
+inventory/
+lib/
+products/
+profile/
+profiles/
+seed/
+ui/
+
 public/
+
 auth.ts
-auth.config.ts``
+auth.config.ts
 
 
-Key Technical Notes
 
-The application uses a Next.js app-based structure with server-side data fetching and authentication logic. The data layer includes functions for:
+The application follows a modular structure using Next.js app routing.  
+Data fetching and server logic are organized inside the `lib` directory.
 
-fetching products
+---
 
-fetching product categories
+# Key Technical Notes
 
-retrieving product reviews
+The platform connects product data with seller data so that users can easily see who is selling a product and navigate directly to the seller's profile.
 
-loading seller profiles
+Key backend functions include:
 
-loading seller products
+- Fetching product lists
+- Fetching categories
+- Retrieving product reviews
+- Loading seller profiles
+- Loading seller products
+- Checking product ownership
+- Managing shopping cart items
+- Counting cart items for the user session
 
-checking product ownership
+This structure allows the application to scale while keeping logic organized.
 
-handling cart item counts and cart items
+---
 
-Seller data is connected to products so buyers can view who is selling an item and navigate to the seller's profile page for more context.
-
-Installation
+# Installation
 
 Clone the repository:
-
 git clone https://github.com/bmcaldarella/handcrafted.git
+
+
+Move into the project folder:
 cd handcrafted
 
 Install dependencies:
-
 npm install
 
 Run the development server:
-
 npm run dev
 
-Open http://localhost:3000 in your browser.
-
-Environment Variables
-
-You will need environment variables for database and authentication setup. Based on the project structure, this app uses a Postgres connection and authentication configuration.
-
-Example:
-
-POSTGRES_URL=your_postgres_connection_string
-AUTH_SECRET=your_auth_secret
-AUTH_URL=http://localhost:3000
-
-Update these values according to your local or deployed environment.
-
-Why This Project Matters
-
-This project helped me practice real collaboration in a shared codebase, contribute features to an existing product, and work on marketplace functionality using a modern full-stack JavaScript/TypeScript stack.
-
-It also gave me experience contributing to a project through feature work, integration, and collaborative development rather than only building solo projects from scratch.
-
-Future Improvements
-
-Complete cart and checkout flows
-
-Improve seller dashboard features
-
-Add stronger validation and error states
-
-Improve responsive polish across all pages
-
-Add tests for critical flows
-
-Expand order management features
-
-Acknowledgment
-
-Original project repository and initial project ownership belong to Simphiwe Nkabinde.
-This fork reflects my collaborative contributions and feature work within that project.
+Open the browser at:
+http://localhost:3000
 
 
 ---
 
-## La parte más importante: cómo decir que trabajaste con el owner
+# Environment Variables
 
-Esta línea está bien y suena profesional:
+The project requires environment variables for database access and authentication.
 
-```md
-This repository is a fork of the original project created by **Simphiwe Nkabinde**, and I contributed to the project in collaboration with the original repository owner.
-
-Y esta también está muy buena para portfolio:
-
-This fork documents my collaborative contributions to the original Handcrafted Haven project.
+Example configuration:
+POSTGRES_URL=your_postgres_connection_string
+AUTH_SECRET=your_auth_secret
+AUTH_URL=http://localhost:3000
 
 
+Create a `.env.local` file in the root of the project and add your values there.
+
+---
+
+# Future Improvements
+
+Potential improvements for the platform include:
+
+- Completing the checkout and payment flow
+- Improving the seller dashboard
+- Adding order management
+- Enhancing mobile responsiveness
+- Adding automated tests
+- Improving error handling
+- Expanding marketplace features
+
+---
+
+# Acknowledgment
+
+The original project was created by **Simphiwe Nkabinde**.
+
+This repository is a fork that reflects my **collaborative contributions, feature work, and improvements** made while working within the original project.
